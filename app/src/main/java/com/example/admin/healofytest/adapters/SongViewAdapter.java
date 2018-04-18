@@ -34,9 +34,9 @@ public class SongViewAdapter extends RealmRecyclerViewAdapter<Song,SongViewAdapt
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Song song = getItem(position);
-        holder.nameView.setText(song.getName());
-        holder.artistView.setText(song.getArtist());
-        holder.albumView.setText(song.getAlbum());
+        holder.nameView.setText("Name: " +song.getName());
+        holder.artistView.setText("Artist: "+ song.getArtist());
+        holder.albumView.setText("Album: " + song.getAlbum());
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
